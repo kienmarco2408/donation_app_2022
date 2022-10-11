@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "donation_app_2022",
-    "slug": "donation_app_2022",
+    "name": "Bản đồ thiện nguyện",
+    "slug": "Ban_do_thien_nguyen",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,9 +14,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
