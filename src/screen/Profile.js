@@ -1,10 +1,17 @@
 import { View, Text } from 'react-native';
 import React from 'react';
+import HeaderProfile from '../components/HeaderProfile';
+import HistoryDonate from '../components/HistoryDonate';
 
 const Profile = () => {
   return (
     <View>
-      <Text>Profile</Text>
+      <View>
+        <HeaderProfile />
+      </View>
+      <View>
+        <HistoryDonate />
+      </View>
     </View>
   );
 };

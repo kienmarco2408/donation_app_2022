@@ -1,19 +1,7 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  TouchableOpacity,
-  TextInput,
-} from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import React from 'react';
-import { Ionicons } from '@expo/vector-icons';
-import SearchBar from './SearchBar';
-import Slider from './Slider';
-import Carousel from './Carousel';
-import { slideData } from '../data/slide';
 
-const HeaderHome = () => {
+const HeaderProfile = () => {
   return (
     <View>
       <View style={styles.header}>
@@ -34,11 +22,19 @@ const HeaderHome = () => {
             <Text style={styles.textAddress}>Đống Đa, Hà Nội, Việt Nam</Text>
           </View>
         </View>
-        <View style={{ marginTop: 15 }}>
-          <SearchBar />
-        </View>
-        <View style={styles.titleView}>
-          <Text style={styles.title}>Hoàn cảnh ưa tiên</Text>
+        <View
+          style={{
+            marginHorizontal: '6%',
+            marginTop: 35,
+            flexDirection: 'row',
+          }}
+        >
+          <Text style={{ color: 'white', lineHeight: 16.41, marginRight: 110 }}>
+            <Text style={{ fontWeight: '700' }}>03 lần</Text> ủng hộ
+          </Text>
+          <Text style={{ color: 'white' }}>
+            <Text style={{ fontWeight: '700' }}>1.600.000vnd</Text> đóng góp
+          </Text>
         </View>
       </View>
     </View>
@@ -48,7 +44,7 @@ const HeaderHome = () => {
 const styles = StyleSheet.create({
   header: {
     width: '100%',
-    height: 295,
+    height: 198,
     backgroundColor: '#6200EE',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
@@ -76,5 +72,4 @@ const styles = StyleSheet.create({
     marginLeft: '8%',
   },
 });
-
-export default HeaderHome;
+export default HeaderProfile;

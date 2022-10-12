@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
     width: '90%',
     height: 60,
     backgroundColor: '#F3F9FF',
-    marginTop: 31,
     padding: 20,
     marginHorizontal: 20,
     borderRadius: 8,
