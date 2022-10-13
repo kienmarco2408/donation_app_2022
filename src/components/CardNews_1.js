@@ -53,7 +53,7 @@ const CardNews_1 = () => {
     return (
       <View style={{ marginTop: 17 }} key={data.id}>
         <View style={styles.resultBox}>
-          <TouchableOpacity onPress={() => navigation.push('CourseDetail')}>
+          <TouchableOpacity onPress={() => navigation.push('Detail')}>
             <Image
               style={styles.resultImage}
               source={{
@@ -64,7 +64,7 @@ const CardNews_1 = () => {
 
           <View style={styles.resultTextBox}>
             <TouchableOpacity
-              onPress={() => navigation.push('CourseDetail')}
+              onPress={() => navigation.push('Detail')}
               style={{ flexDirection: 'row' }}
             >
               <Text style={styles.resultText}>{data.title}</Text>

@@ -8,6 +8,7 @@ import Maps from '../screen/Maps';
 import Home from '../screen/Home';
 import News from '../screen/News';
 import Profile from '../screen/Profile';
+import Detail from '../screen/Detail';
 
 const HomeStack = createNativeStackNavigator();
 function HomeStacks() {
@@ -32,6 +33,7 @@ function NewsStacks() {
   return (
     <NewsStack.Navigator screenOptions={{ headerShown: false }}>
       <NewsStack.Screen name="News Stack" component={News} />
+      <NewsStack.Screen name="Detail" component={Detail} />
     </NewsStack.Navigator>
   );
 }
@@ -56,7 +58,7 @@ function Tabs() {
           elevation: 0,
           backgroundColor: '#FFF9EC',
           width: '100%',
-          height: '7%',
+          height: '15%',
           shadowColor: '#FFF9EC',
           shadowOffset: {
             width: 0,
