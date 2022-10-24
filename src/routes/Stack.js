@@ -9,6 +9,8 @@ import Home from '../screen/Home';
 import News from '../screen/News';
 import Profile from '../screen/Profile';
 import Detail from '../screen/Detail';
+import LocationDonate from '../screen/LocationDonate';
+import DetailLocation from '../screen/DetailLocation';
 
 const HomeStack = createNativeStackNavigator();
 function HomeStacks() {
@@ -24,6 +26,8 @@ function MapsStacks() {
   return (
     <MapsStack.Navigator screenOptions={{ headerShown: false }}>
       <MapsStack.Screen name="Maps Stack" component={Maps} />
+      <MapsStack.Screen name="LocationDonate" component={LocationDonate} />
+      <MapsStack.Screen name="DetailLocation" component={DetailLocation} />
     </MapsStack.Navigator>
   );
 }

@@ -1,16 +1,22 @@
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import React from 'react';
 import HeaderDetail from '../components/HeaderDetail';
 import { useNavigation } from '@react-navigation/native';
+import ContentDetail from '../components/ContentDetail';
 
 const Detail = ({ route }) => {
   const navigation = useNavigation();
   return (
-    <View>
+    <ScrollView>
       <View>
-        <HeaderDetail />
+        <View>
+          <HeaderDetail />
+        </View>
+        <View>
+          <ContentDetail />
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

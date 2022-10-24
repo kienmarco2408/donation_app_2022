@@ -131,6 +131,30 @@ const Maps = ({ navigation }) => {
             </MapView.Marker>
           );
         })}
+        <View
+          style={{
+            width: '100%',
+            height: 80,
+            backgroundColor: '#13A49E',
+            justifyContent: 'center',
+            alignSelf: 'center',
+            borderTopLeftRadius: 30,
+            borderTopRightRadius: 30,
+          }}
+        >
+          <TouchableOpacity onPress={() => navigation.push('LocationDonate')}>
+            <View>
+              <AntDesign
+                name="minus"
+                size={60}
+                style={{ alignSelf: 'center' }}
+              />
+              <Text style={{ marginBottom: 20, alignSelf: 'center' }}>
+                Hiển thị danh sách
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
       </MapView>
       <Animated.ScrollView
         ref={_scrollView}
@@ -185,24 +209,6 @@ const Maps = ({ navigation }) => {
           ></View>
         ))}
       </Animated.ScrollView>
-      <View
-        style={{
-          width: '100%',
-          height: 80,
-          backgroundColor: '#13A49E',
-          justifyContent: 'center',
-          alignItems: 'center',
-          borderTopLeftRadius: 30,
-          borderTopRightRadius: 30,
-        }}
-      >
-        <TouchableOpacity onPress={() => navigation.push('Collection')}>
-          <View>
-            <AntDesign name="minus" size={60} />
-            <Text style={{ marginBottom: 20 }}>Hiển thị danh sách</Text>
-          </View>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 };
