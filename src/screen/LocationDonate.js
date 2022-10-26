@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 const LocationDonate = () => {
   const navigation = useNavigation();
   return (
-    <ScrollView>
+    <ScrollView style={{ marginBottom: '30%' }}>
       <View>
         <View style={styles.header}>
           <View style={styles.titleHeader}>

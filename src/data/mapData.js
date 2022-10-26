@@ -1,54 +1,51 @@
-const Images = [
-  { image: require('../storages/imgs/maps/post_1.jpg') },
-  { image: require('../storages/imgs/maps/post_2.jpg') },
-  { image: require('../storages/imgs/maps/post_3.jpg') },
-  { image: require('../storages/imgs/maps/post_4.jpg') },
-];
-
 export const markers = [
   {
     coordinate: {
-      latitude: 41.91612,
-      longitude: 12.46595,
+      latitude: 20.7837896,
+      longitude: 107.063591,
     },
-    title: 'Trung tâm can thiện và hỗ trợ giáo dục hòa nhập An Hòa',
-    address:
-      'Số 14, ngõ 13, Khuất Duy Tiến, Thanh Xuân Bắc, Thanh Xuân, Hà Nội',
-    image: Images[0].image,
-    name: 'Lưu Thị Cúc',
-    strength:
-      'Phát triển kỹ năng chơi, Phát triển ngôn ngữ và kỹ năng xã hội, chỉnh ngọng, tiền tiểu học, hòa nhập.',
-    number: '1023 456 789',
-    email: 'luuthicuc@gmail.com',
-    university: 'Sư phạm giáo dục đặc biệt',
-    years: '12',
+    title: 'Trường học ngoài đảo',
+    img: require('../storages/imgs/list_news/img4.png'),
+    address: 'Trường tiểu học Việt Hải, Việt Hải, Hải Phòng',
+    number: '0333401321',
+    content:
+      'Trường tiểu học Việt Hải, xã Việt Hải, đảo Cát Bà, tỉnh Hải Phòng có tổng sĩ số là 24 em học sinh, từ lớp 1 cho đến lớp 5. Đây là con số rất nhỏ bé, thậm chí còn chưa bằng sĩ số một lớp tại trường tiểu học thông thường tại Hà Nội.',
   },
 
   {
     coordinate: {
-      latitude: 45.4373409,
-      longitude: 12.2918135,
+      latitude: 20.743643,
+      longitude: 104.8871282,
     },
-    title: 'Venice',
-    description: 'This is the best place',
-    image: Images[1].image,
+    title: 'Tin học với trẻ em vùng cao',
+    img: require('../storages/imgs/list_news/img5.png'),
+    address: 'Trường tiểu học Việt Hải, Việt Hải, Hải Phòng',
+    number: '0333401321',
+    content:
+      'Hang Kia là một xã đặc biệt khó khăn của hy vọng huyện Mai Châu nằm trong chương trình 135, với dân số trên 95% là đồng bào dân tộc Mông; tỷ lệ người dân xã Hang Kia không biết nói tiếng phổ thông chiếm gần 60%. Từ trung tâm xã đến điểm trường Tiểu học và Trung học cơ sở Hang Kia B phải mất gần một tiếng đồng hồ di chuyển.',
   },
   {
     coordinate: {
-      latitude: 18.3962901,
-      longitude: -79.7570175,
+      latitude: 11.5821791,
+      longitude: 108.5128458,
     },
-    title: 'Beach Caribbean',
-    description: 'This is the best place',
-    image: Images[2].image,
+    title: 'Một ngày đặc biệt',
+    img: require('../storages/imgs/list_news/img6.png'),
+    address: 'Trường tiểu học Ma Bó, xã Đa Quyn, Đức Trọng, Lâm Đồng',
+    number: '0333401321',
+    content:
+      'Xã Đa Quyn là một trong những xã nghèo nhất thuộc huyện Đức Trọng, tỉnh Lâm Đồng. Nằm ở vị trí địa lý hẻo lánh, dân cư thưa thớt, điều kiện sinh hoạt còn vô vàn thiếu thốn và khó khăn và các học sinh ở đây cũng hiếm có cơ hội tiếp xúc với công nghệ.',
   },
   {
     coordinate: {
-      latitude: 31.2243084,
-      longitude: 120.9162742,
+      latitude: 12.1879578,
+      longitude: 109.3128919,
     },
-    title: 'Shang Hai',
-    description: 'This is the best place',
-    image: Images[3].image,
+    title: 'Niềm hứng thú mới',
+    img: require('../storages/imgs/list_news/img7.png'),
+    address: 'Đảo Bích Đầm, Nha Trang',
+    number: '0333401321',
+    content:
+      'Cách trung tâm thành phố khoảng 5km đường biển, Đảo Bích Đầm thuộc về một xã đảo xa nhất của thành phố Nha Trang. Đây là nơi cư trú của 174 hộ gia đình với khoảng gần 1000 người, nghề chính của họ chủ yếu dựa vào biển cả như: đánh bắt, nuôi trồng thủy sản.',
   },
 ];

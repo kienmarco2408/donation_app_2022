@@ -10,7 +10,6 @@ import React from 'react';
 import HeaderHome from '../components/HeaderHome';
 import { slideData } from '../data/slide';
 import Carousel from '../components/Carousel';
-import Slider from '../components/Slider';
 import Location from '../components/Location';
 import ButtonCategories from '../components/ButtonCategories';
 import Categories from '../components/Categories';
@@ -45,7 +44,7 @@ const Home = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginBottom:'30%'
+    marginBottom: '30%',
   },
 });
 

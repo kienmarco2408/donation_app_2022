@@ -18,7 +18,7 @@ const HeaderProfile = () => {
           </TouchableOpacity>
 
           <View style={{ marginLeft: 5, width: 176 }}>
-            <Text style={styles.textProfile}>Chào Gia Huy</Text>
+            <Text style={styles.textProfile}>Chào Khải</Text>
             <Text style={styles.textAddress}>Đống Đa, Hà Nội, Việt Nam</Text>
           </View>
         </View>

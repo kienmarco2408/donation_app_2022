@@ -9,7 +9,6 @@ import {
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import SearchBar from './SearchBar';
-import Slider from './Slider';
 import Carousel from './Carousel';
 import { slideData } from '../data/slide';
 
@@ -30,7 +29,7 @@ const HeaderHome = () => {
           </TouchableOpacity>
 
           <View style={{ marginLeft: 5, width: 176 }}>
-            <Text style={styles.textProfile}>Chào Gia Huy</Text>
+            <Text style={styles.textProfile}>Chào Khải</Text>
             <Text style={styles.textAddress}>Đống Đa, Hà Nội, Việt Nam</Text>
           </View>
         </View>
@@ -48,7 +47,7 @@ const HeaderHome = () => {
 const styles = StyleSheet.create({
   header: {
     width: '100%',
-    height: 295,
+    height: 250,
     backgroundColor: '#6200EE',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,

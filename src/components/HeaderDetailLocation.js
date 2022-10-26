@@ -5,12 +5,12 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
-} from "react-native";
-import React from "react";
-import { Ionicons } from "@expo/vector-icons";
-import StatusView from "./StatusView";
-import { useNavigation } from "@react-navigation/native";
-import { Button } from "react-native-paper";
+} from 'react-native';
+import React from 'react';
+import { Ionicons } from '@expo/vector-icons';
+import StatusView from './StatusView';
+import { useNavigation } from '@react-navigation/native';
+import { Button } from 'react-native-paper';
 
 const HeaderDetailLocation = () => {
   const navigation = useNavigation();
@@ -20,54 +20,54 @@ const HeaderDetailLocation = () => {
         <View style={styles.titleHeader}></View>
         <View
           style={{
-            height: "auto",
+            height: 'auto',
             width: 350,
             marginTop: 24,
             marginLeft: 20,
           }}
         >
-          <Text style={{ fontSize: 18, fontWeight: "700" }}>
+          <Text style={{ fontSize: 18, fontWeight: '700' }}>
             Mơ ước vào giảng đường của nữ sinh nghèo có bố bại liệt, mẹ trầm cảm
           </Text>
         </View>
         <View style={{ marginHorizontal: 20, marginTop: 6 }}>
-          <Text style={{ color: "#888C94", fontWeight: "600", fontSize: 14 }}>
+          <Text style={{ color: '#888C94', fontWeight: '600', fontSize: 14 }}>
             #giaoduc #hoancanh #hongheo #suckhoe
           </Text>
         </View>
         <View style={{ marginHorizontal: 20, marginTop: 24 }}>
           <Text>
-            <Text style={{ fontWeight: "bold", color: "#431586" }}>
-              Địa chỉ:{" "}
+            <Text style={{ fontWeight: 'bold', color: '#431586' }}>
+              Địa chỉ:{' '}
             </Text>
           </Text>
         </View>
         <View style={{ marginLeft: 20, marginTop: 10 }}>
           <Text>
-            <Text style={{ fontWeight: "bold", color: "#431586" }}>SĐT: </Text>
+            <Text style={{ fontWeight: 'bold', color: '#431586' }}>SĐT: </Text>
           </Text>
         </View>
         <View style={{ marginLeft: 20, marginTop: 10 }}>
           <Text>
-            <Text style={{ fontWeight: "bold", color: "#431586" }}>
-              Có thể hỗ trợ về:{" "}
+            <Text style={{ fontWeight: 'bold', color: '#431586' }}>
+              Có thể hỗ trợ về:{' '}
             </Text>
           </Text>
         </View>
         <View
           style={{
-            flexDirection: "row",
+            flexDirection: 'row',
             marginHorizontal: 16,
-            justifyContent: "space-around",
+            justifyContent: 'space-around',
           }}
         >
-          <TouchableOpacity onPress={() => navigation.navigate("Maps")}>
+          <TouchableOpacity onPress={() => navigation.navigate('Maps')}>
             <View
               style={{
                 height: 50,
                 width: 162,
                 marginTop: 20,
-                alignSelf: "center",
+                alignSelf: 'center',
               }}
             >
               <Button
@@ -80,13 +80,13 @@ const HeaderDetailLocation = () => {
               </Button>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate("Donate")}>
+          <TouchableOpacity onPress={() => navigation.navigate('Donate')}>
             <View
               style={{
                 height: 50,
                 width: 162,
                 marginTop: 20,
-                alignSelf: "center",
+                alignSelf: 'center',
               }}
             >
               <Button
@@ -103,13 +103,13 @@ const HeaderDetailLocation = () => {
       </View>
       <View
         style={{
-          alignItems: "center",
+          alignItems: 'center',
           marginHorizontal: 20,
           marginBottom: 20,
         }}
       >
         <View style={{ marginTop: 24 }}>
-          <Image source={require("../storages/imgs/list_location/img1.png")} />
+          <Image source={require('../storages/imgs/list_location/img1.png')} />
           <Text>Thu Trinh luôn khát khao được tiếp tục học đại học.</Text>
         </View>
         <View style={{ marginTop: 10 }}>
@@ -127,21 +127,21 @@ const HeaderDetailLocation = () => {
 
 const styles = StyleSheet.create({
   header: {
-    width: "100%",
+    width: '100%',
     height: 293,
-    backgroundColor: "white",
+    backgroundColor: 'white',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
   },
   titleHeader: {
     marginLeft: 18,
-    flexDirection: "row",
+    flexDirection: 'row',
   },
   textHeader: {
     marginLeft: 15,
     fontSize: 22,
-    fontWeight: "700",
-    color: "#6200EE",
+    fontWeight: '700',
+    color: '#6200EE',
   },
 });
 

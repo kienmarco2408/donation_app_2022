@@ -1,18 +1,18 @@
-import { Ionicons } from "@expo/vector-icons";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import React, { useEffect, useState } from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { View, Image, Text, TouchableOpacity } from "react-native";
-import Maps from "../screen/Maps";
-import Home from "../screen/Home";
-import News from "../screen/News";
-import Profile from "../screen/Profile";
-import Detail from "../screen/Detail";
-import LocationDonate from "../screen/LocationDonate";
-import DetailLocation from "../screen/DetailLocation";
-import DetailDonation from "../screen/DetailDonation";
-import Donate from "../screen/Donate";
+import { Ionicons } from '@expo/vector-icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import React, { useEffect, useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
+import Maps from '../screen/Maps';
+import Home from '../screen/Home';
+import News from '../screen/News';
+import Profile from '../screen/Profile';
+import Detail from '../screen/Detail';
+import LocationDonate from '../screen/LocationDonate';
+import DetailLocation from '../screen/DetailLocation';
+import DetailDonation from '../screen/DetailDonation';
+import Donate from '../screen/Donate';
 
 const HomeStack = createNativeStackNavigator();
 function HomeStacks() {
@@ -65,12 +65,12 @@ function Tabs() {
       screenOptions={{
         tabBarShowLabel: false,
         tabBarStyle: {
-          position: "absolute",
+          position: 'absolute',
           elevation: 0,
-          backgroundColor: "#FFF9EC",
-          width: "100%",
-          height: "15%",
-          shadowColor: "#FFF9EC",
+          backgroundColor: '#FFF9EC',
+          width: '100%',
+          height: '15%',
+          shadowColor: '#FFF9EC',
           shadowOffset: {
             width: 0,
             height: 10,
@@ -89,18 +89,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/icon/home.png")}
+                source={require('../storages/icon/home.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#8133F1" : "#B8B8B8",
+                  tintColor: focused ? '#8133F1' : '#B8B8B8',
                 }}
               ></Image>
             </View>
@@ -116,18 +116,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/icon/maps.png")}
+                source={require('../storages/icon/maps.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#8133F1" : "#B8B8B8",
+                  tintColor: focused ? '#8133F1' : '#B8B8B8',
                 }}
               ></Image>
             </View>
@@ -143,18 +143,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/icon/news.png")}
+                source={require('../storages/icon/news.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#8133F1" : "#B8B8B8",
+                  tintColor: focused ? '#8133F1' : '#B8B8B8',
                 }}
               ></Image>
             </View>
@@ -170,18 +170,18 @@ function Tabs() {
           tabBarIcon: ({ focused }) => (
             <View
               style={{
-                alignItems: "center",
-                justifyContent: "center",
-                top: "-5%",
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: '-5%',
               }}
             >
               <Image
-                source={require("../storages/icon/profile.png")}
+                source={require('../storages/icon/profile.png')}
                 resizeMode="contain"
                 style={{
                   width: 30,
                   height: 30,
-                  tintColor: focused ? "#8133F1" : "#B8B8B8",
+                  tintColor: focused ? '#8133F1' : '#B8B8B8',
                 }}
               ></Image>
             </View>

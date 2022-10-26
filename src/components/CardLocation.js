@@ -1,43 +1,63 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
-import React from "react";
-import { useNavigation } from "@react-navigation/native";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 const CardLocation = () => {
   const navigation = useNavigation();
   const listlocation = [
     {
       id: 1,
-      title:
-        "Mơ ước vào giảng đường của nữ sinh nghèo có bố bại liệt, mẹ trầm cảm",
-      img: require("../storages/imgs/list_location/img1.png"),
-      andress: "Thôn Tân Quảng, xã Ea Kênh, huyện Krông Pắk, tỉnh Đắk Lắk",
-      number: "0333401321",
+      title: 'Trường học ngoài đảo',
+      img: require('../storages/imgs/list_news/img4.png'),
+      address: 'Trường tiểu học Việt Hải, Việt Hải, Hải Phòng',
+      number: '0333401321',
+      content:
+        'Trường tiểu học Việt Hải, xã Việt Hải, đảo Cát Bà, tỉnh Hải Phòng có tổng sĩ số là 24 em học sinh, từ lớp 1 cho đến lớp 5. Đây là con số rất nhỏ bé, thậm chí còn chưa bằng sĩ số một lớp tại trường tiểu học thông thường tại Hà Nội.',
     },
     {
       id: 2,
-      title:
-        "Mơ ước vào giảng đường của nữ sinh nghèo có bố bại liệt, mẹ trầm cảm",
-      img: require("../storages/imgs/list_location/img1.png"),
-      andress: "Thôn Tân Quảng, xã Ea Kênh, huyện Krông Pắk, tỉnh Đắk Lắk",
-      number: "0333401321",
+      title: 'Tin học với trẻ em vùng cao',
+      img: require('../storages/imgs/list_news/img5.png'),
+      address: 'Trường tiểu học Việt Hải, Việt Hải, Hải Phòng',
+      number: '0333401321',
+      content:
+        'Hang Kia là một xã đặc biệt khó khăn của hy vọng huyện Mai Châu nằm trong chương trình 135, với dân số trên 95% là đồng bào dân tộc Mông; tỷ lệ người dân xã Hang Kia không biết nói tiếng phổ thông chiếm gần 60%. Từ trung tâm xã đến điểm trường Tiểu học và Trung học cơ sở Hang Kia B phải mất gần một tiếng đồng hồ di chuyển.',
     },
     {
       id: 3,
-      title:
-        "Mơ ước vào giảng đường của nữ sinh nghèo có bố bại liệt, mẹ trầm cảm",
-      img: require("../storages/imgs/list_location/img1.png"),
-      andress: "Thôn Tân Quảng, xã Ea Kênh, huyện Krông Pắk, tỉnh Đắk Lắk",
-      number: "0333401321",
+      title: 'Một ngày đặc biệt',
+      img: require('../storages/imgs/list_news/img6.png'),
+      address: 'Trường tiểu học Ma Bó, xã Đa Quyn, Đức Trọng, Lâm Đồng',
+      number: '0333401321',
+      content:
+        'Xã Đa Quyn là một trong những xã nghèo nhất thuộc huyện Đức Trọng, tỉnh Lâm Đồng. Nằm ở vị trí địa lý hẻo lánh, dân cư thưa thớt, điều kiện sinh hoạt còn vô vàn thiếu thốn và khó khăn và các học sinh ở đây cũng hiếm có cơ hội tiếp xúc với công nghệ.',
+    },
+    {
+      id: 4,
+      title: 'Niềm hứng thú mới',
+      img: require('../storages/imgs/list_news/img7.png'),
+      address: 'Đảo Bích Đầm, Nha Trang',
+      number: '0333401321',
+      content:
+        'Cách trung tâm thành phố khoảng 5km đường biển, Đảo Bích Đầm thuộc về một xã đảo xa nhất của thành phố Nha Trang. Đây là nơi cư trú của 174 hộ gia đình với khoảng gần 1000 người, nghề chính của họ chủ yếu dựa vào biển cả như: đánh bắt, nuôi trồng thủy sản.',
     },
   ];
   return listlocation.map((data, index) => {
     return (
       <TouchableOpacity
         key={data.id}
-        onPress={() => navigation.navigate("DetailLocation")}
+        onPress={() =>
+          navigation.navigate('DetailLocation', {
+            title: data.title,
+            content: data.content,
+            img: data.img,
+            address: data.address,
+            number: data.number,
+          })
+        }
       >
         <View style={styles.cardView}>
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Image style={styles.img} source={data.img} />
             <View style={styles.textView}>
               <Text style={styles.text}>{data.title}</Text>
@@ -45,16 +65,16 @@ const CardLocation = () => {
           </View>
           <View style={{ marginHorizontal: 5, marginVertical: 11 }}>
             <Text>
-              <Text style={{ fontWeight: "bold", color: "#431586" }}>
-                Địa chỉ:{" "}
+              <Text style={{ fontWeight: 'bold', color: '#431586' }}>
+                Địa chỉ:{' '}
               </Text>
-              {data.andress}
+              {data.address}
             </Text>
           </View>
           <View style={{ marginLeft: 5 }}>
             <Text>
-              <Text style={{ fontWeight: "bold", color: "#431586" }}>
-                SĐT:{" "}
+              <Text style={{ fontWeight: 'bold', color: '#431586' }}>
+                SĐT:{' '}
               </Text>
               {data.number}
             </Text>
@@ -69,7 +89,7 @@ const styles = StyleSheet.create({
   cardView: {
     height: 165,
     width: 336,
-    backgroundColor: "#EBE5F7",
+    backgroundColor: '#EBE5F7',
     marginBottom: 20,
     borderRadius: 9,
     shadowOpacity: 0.5,
@@ -87,8 +107,8 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   text: {
-    fontWeight: "bold",
-    color: "#431586",
+    fontWeight: 'bold',
+    color: '#431586',
   },
 });
 
