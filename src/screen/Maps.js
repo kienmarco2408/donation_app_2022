@@ -1,5 +1,5 @@
-import * as React from 'react';
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import * as React from "react";
+import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
 import {
   StyleSheet,
   Text,
@@ -9,21 +9,21 @@ import {
   Animated,
   Platform,
   TouchableOpacity,
-} from 'react-native';
-import { AntDesign, FontAwesome } from '@expo/vector-icons';
-import { markers } from '../data/mapData';
+} from "react-native";
+import { AntDesign, FontAwesome } from "@expo/vector-icons";
+import { markers } from "../data/mapData";
 
-const { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get("window");
 const CARD_HEIGHT = 244;
-const CARD_WIDTH = width * 0.9;
-const SPACING_FOR_CARD_INSET = width * 0.1 - 35;
+const CARD_WIDTH = width * 0.75;
+const SPACING_FOR_CARD_INSET = width * 0.1 - 20;
 
 const mapStandardStyle = [
   {
-    elementType: 'labels.icon',
+    elementType: "labels.icon",
     stylers: [
       {
-        visibility: 'off',
+        visibility: "off",
       },
     ],
   },
@@ -31,8 +31,10 @@ const mapStandardStyle = [
 
 const Maps = ({ navigation }) => {
   const region = {
-    latitudeDelta: 5,
-    longitudeDelta: 5,
+    latitude: 21.0195109,
+    longitude: 105.7973823,
+    latitudeDelta: 0.04864195044303443,
+    longitudeDelta: 0.040142817690068,
   };
   const [state, setState] = React.useState(markers, region);
 
@@ -78,7 +80,7 @@ const Maps = ({ navigation }) => {
     const scale = mapAnimation.interpolate({
       inputRange,
       outputRange: [1, 1.5, 1],
-      extrapolate: 'clamp',
+      extrapolate: "clamp",
     });
     return { scale };
   });
@@ -87,7 +89,7 @@ const Maps = ({ navigation }) => {
     const markerID = mapEventData._targetInst.return.key;
 
     let x = markerID * CARD_WIDTH + markerID * 20;
-    if (Platform.OS === 'ios') {
+    if (Platform.OS === "ios") {
       x = x - SPACING_FOR_CARD_INSET;
     }
 
@@ -123,7 +125,7 @@ const Maps = ({ navigation }) => {
             >
               <Animated.View style={[styles.markerWrap]}>
                 <Animated.Image
-                  source={require('../storages/imgs/mark/map_pin.png')}
+                  source={require("../storages/imgs/mark/map_pin.png")}
                   style={[styles.marker, scaleStyle]}
                   resizeMode="cover"
                 />
@@ -133,23 +135,30 @@ const Maps = ({ navigation }) => {
         })}
         <View
           style={{
-            width: '100%',
+            width: "100%",
             height: 80,
-            backgroundColor: '#13A49E',
-            justifyContent: 'center',
-            alignSelf: 'center',
-            borderTopLeftRadius: 30,
-            borderTopRightRadius: 30,
+            backgroundColor: "#13A49E",
+            justifyContent: "center",
+            alignSelf: "center",
+            borderBottomLeftRadius: 30,
+            borderBottomRightRadius: 30,
           }}
         >
-          <TouchableOpacity onPress={() => navigation.push('LocationDonate')}>
+          <TouchableOpacity onPress={() => navigation.push("LocationDonate")}>
             <View>
               <AntDesign
                 name="minus"
                 size={60}
-                style={{ alignSelf: 'center' }}
+                style={{ alignSelf: "center" }}
+                color="white"
               />
-              <Text style={{ marginBottom: 20, alignSelf: 'center' }}>
+              <Text
+                style={{
+                  marginBottom: 20,
+                  alignSelf: "center",
+                  color: "white",
+                }}
+              >
                 Hiển thị danh sách
               </Text>
             </View>
@@ -162,7 +171,7 @@ const Maps = ({ navigation }) => {
         scrollEventThrottle={1}
         showsHorizontalScrollIndicator={false}
         style={{
-          position: 'absolute',
+          position: "absolute",
           bottom: 0,
           left: 0,
           right: 0,
@@ -180,7 +189,7 @@ const Maps = ({ navigation }) => {
         }}
         contentContainerStyle={{
           paddingHorizontal:
-            Platform.OS === 'android' ? SPACING_FOR_CARD_INSET : 0,
+            Platform.OS === "android" ? SPACING_FOR_CARD_INSET : 0,
         }}
         onScroll={Animated.event(
           [
@@ -196,17 +205,44 @@ const Maps = ({ navigation }) => {
         )}
       >
         {markers.map((marker, index) => (
-          <View
-            style={{
-              backgroundColor: '#FFF',
-              borderRadius: 6,
-              marginHorizontal: 20,
-              height: 200,
-              width: 375,
-              marginBottom: 150,
-            }}
+          <TouchableOpacity
+            onPress={() => navigation.navigate("DetailLocation")}
             key={index}
-          ></View>
+          >
+            <View
+              style={{
+                backgroundColor: "#EBE5F7",
+                borderRadius: 6,
+                marginHorizontal: 20,
+                height: 165,
+                width: 336,
+                marginBottom: 150,
+              }}
+            >
+              <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Image style={styles.img} />
+                <View style={styles.textView}>
+                  <Text style={styles.text}>ac</Text>
+                </View>
+              </View>
+              <View style={{ marginHorizontal: 5, marginVertical: 11 }}>
+                <Text>
+                  <Text style={{ fontWeight: "bold", color: "#431586" }}>
+                    Địa chỉ:{" "}
+                  </Text>
+                  ascascas
+                </Text>
+              </View>
+              <View style={{ marginLeft: 5 }}>
+                <Text>
+                  <Text style={{ fontWeight: "bold", color: "#431586" }}>
+                    SĐT:{" "}
+                  </Text>
+                  00616
+                </Text>
+              </View>
+            </View>
+          </TouchableOpacity>
         ))}
       </Animated.ScrollView>
     </View>
@@ -216,18 +252,18 @@ const Maps = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
   map: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height - 50,
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height - 50,
   },
   bubble: {
-    flexDirection: 'column',
-    alignSelf: 'flex-start',
-    backgroundColor: '#FFFFFF',
+    flexDirection: "column",
+    alignSelf: "flex-start",
+    backgroundColor: "#FFFFFF",
     borderRadius: 6,
-    borderColor: '#ccc',
+    borderColor: "#ccc",
     borderWidth: 0.5,
     padding: 15,
     width: 150,
@@ -237,16 +273,16 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   arrowBorder: {
-    backgroundColor: 'transparent',
-    borderColor: 'transparent',
-    borderTopColor: '#007a87',
+    backgroundColor: "transparent",
+    borderColor: "transparent",
+    borderTopColor: "#007a87",
     borderWidth: 16,
-    alignSelf: 'center',
+    alignSelf: "center",
     marginTop: -0.5,
   },
   markerWrap: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     width: 50,
     height: 50,
   },
@@ -255,16 +291,27 @@ const styles = StyleSheet.create({
     height: 30,
   },
   arrow: {
-    backgroundColor: 'transparent',
-    borderColor: 'transparent',
-    borderTopColor: '#FFFFFF',
+    backgroundColor: "transparent",
+    borderColor: "transparent",
+    borderTopColor: "#FFFFFF",
     borderWidth: 16,
-    alignSelf: 'center',
+    alignSelf: "center",
     marginTop: -32,
   },
   image: {
     width: 120,
     height: 50,
+  },
+  img: {
+    width: 79,
+    height: 79,
+    borderRadius: 9,
+    marginLeft: 5,
+    marginTop: 5,
+  },
+  text: {
+    fontWeight: "bold",
+    color: "#431586",
   },
 });
 

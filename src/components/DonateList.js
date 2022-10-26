@@ -6,27 +6,24 @@ const history = [
   {
     id: 1,
     time: "01/10/22",
-    situation:
-      "Mơ ước vào giảng đường của nữ sinh nghèo có bố bại liệt, mẹ trầm cảm",
+    situation: "thanhtu22",
     money: "200.000 vnd",
   },
   {
     id: 2,
     time: "02/10/22",
-    situation:
-      "Mơ ước vào giảng đường của nữ sinh nghèo có bố bại liệt, mẹ trầm cảm",
+    situation: "nguyenthao",
     money: "400.000 vnd",
   },
   {
     id: 3,
     time: "03/10/22",
-    situation:
-      "Mơ ước vào giảng đường của nữ sinh nghèo có bố bại liệt, mẹ trầm cảm",
+    situation: "dungduong21",
     money: "1.000.000 vnd",
   },
 ];
 
-const HistoryDonate = () => {
+const DonateList = () => {
   const item = ({ item }) => {
     return (
       <View style={{ flexDirection: "row", marginTop: 24 }}>
@@ -36,7 +33,7 @@ const HistoryDonate = () => {
           </Text>
         </View>
         <View style={{ width: 150 }}>
-          <Text style={{ fontWeight: "600", color: "#431586" }}>
+          <Text style={{ fontWeight: "600", color: "#757575" }}>
             {item.situation}
           </Text>
         </View>
@@ -65,7 +62,7 @@ const HistoryDonate = () => {
         </View>
         <View style={{ width: 150 }}>
           <Text style={{ fontWeight: "700", fontSize: 18, color: "#757575" }}>
-            Hoàn cảnh
+            Người gửi
           </Text>
         </View>
         <View style={{ width: 120 }}>
@@ -83,4 +80,4 @@ const HistoryDonate = () => {
   );
 };
 
-export default HistoryDonate;
+export default DonateList;

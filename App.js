@@ -1,5 +1,5 @@
-import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
-import RootStack from './src/routes/Stack';
+import { SafeAreaView, StatusBar, StyleSheet, Text, View } from "react-native";
+import RootStack from "./src/routes/Stack";
 
 export default function App() {
   return (

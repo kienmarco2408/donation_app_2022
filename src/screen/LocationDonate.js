@@ -2,8 +2,10 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import CardLocation from '../components/CardLocation';
+import { useNavigation } from '@react-navigation/native';
 
 const LocationDonate = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView>
       <View>
@@ -13,6 +15,7 @@ const LocationDonate = () => {
               name="arrow-back"
               size={24}
               style={{ fontWeight: '700', color: 'white' }}
+              onPress={() => navigation.goBack()}
             />
             <Text style={styles.textHeader}>Danh sách từ thiện</Text>
           </View>
